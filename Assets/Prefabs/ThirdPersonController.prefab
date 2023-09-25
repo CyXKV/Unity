@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3683464886249703315}
-  - component: {fileID: 1539970015242517343}
   - component: {fileID: 1930086907638047300}
   - component: {fileID: 2635615236264421604}
   m_Layer: 0
@@ -35,32 +34,6 @@ Transform:
   - {fileID: 3261972272388469949}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -4.92, y: -7.61, z: 2}
---- !u!143 &1539970015242517343
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1065536412302904023}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Height: 2.7
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1930086907638047300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73,11 +46,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb74ea153eb644142ba8aa4b2ef4c259, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: {fileID: 0}
   speed: 5
   turnSmoothTime: 0.1
   cam: {fileID: 0}
   gravity: 10
+  rb: {fileID: 0}
 --- !u!54 &2635615236264421604
 Rigidbody:
   m_ObjectHideFlags: 0
