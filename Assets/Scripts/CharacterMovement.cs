@@ -8,6 +8,8 @@ public class CharacterMovement : MonoBehaviour
     private Camera mainCamera;
     public Animator anim;
 
+    private char c;
+
     void Start()
     {
         mainCamera = Camera.main;
