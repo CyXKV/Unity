@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
-    public float moveSpeed = 3.0f;
+    public float moveSpeed = 5.0f;
     private Camera mainCamera;
     public Animator anim;
 
@@ -20,6 +20,17 @@ public class CharacterMovement : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            anim.SetBool("isRun", true);
+            moveSpeed = 8.0f; // ”величиваем скорость перемещени€ при беге
+        }
+        else
+        {
+            anim.SetBool("isRun", false);
+            moveSpeed = 5.0f; // ¬осстанавливаем обычную скорость перемещени€
+        }
+
         if (mainCamera == null)
         {
             return;
