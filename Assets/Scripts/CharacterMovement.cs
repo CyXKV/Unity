@@ -8,8 +8,6 @@ public class CharacterMovement : MonoBehaviour
     private Camera mainCamera;
     public Animator anim;
 
-    private char c;
-
     void Start()
     {
         mainCamera = Camera.main;
@@ -31,6 +29,21 @@ public class CharacterMovement : MonoBehaviour
         {
             anim.SetBool("isRun", false);
             moveSpeed = 5.0f; // ¬осстанавливаем обычную скорость перемещени€
+        }
+
+        if (Input.GetMouseButton(1))
+        {
+            anim.SetBool("isBlock", true);
+        }
+        else
+        {
+            anim.SetBool("isBlock", false);
+        }
+
+        if (anim.GetBool("isBlock"))
+        {
+            anim.SetBool("isWalk", false);
+            return; // ≈сли в блоке, не обрабатываем движение
         }
 
         if (mainCamera == null)
